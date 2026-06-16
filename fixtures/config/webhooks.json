@@ -1,0 +1,8 @@
+{
+  "webhooks": [
+    {
+      "name": "events",
+      "url": "/api/webhook/events"
+    }
+  ]
+}

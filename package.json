@@ -1,0 +1,38 @@
+{
+  "name": "cross-prune",
+  "version": "0.1.0",
+  "description": "Lean full-stack API reachability auditor that reports evidence-backed prune candidates without deleting code.",
+  "main": "src/index.js",
+  "bin": {
+    "cross-prune": "bin/cross-prune.js"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "package-lock.json",
+    "src/",
+    "bin/",
+    "tests/",
+    "fixtures/",
+    "examples/",
+    ".agents/skills/cross-prune/SKILL.md"
+  ],
+  "scripts": {
+    "audit": "node src/index.js",
+    "test": "node tests/cross-prune.test.js",
+    "prepublish-check": "npm test && npm pack --dry-run && git status --short && ! grep -RInE \"$HOME|A[P]I_KEY=|T[O]KEN=|S[E]CRET=|P[A]SSWORD=|C[O]OKIE=|A[U]THORIZATION=|P[R]IVATE_URL=\" --exclude-dir=node_modules --exclude-dir=reports --exclude-dir=cross-prune-test --exclude=package-lock.json ."
+  },
+  "keywords": [
+    "dead-code",
+    "api",
+    "express",
+    "codex",
+    "static-analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "gpt-tokenizer": "^3.4.0"
+  }
+}
