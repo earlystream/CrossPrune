@@ -1,0 +1,9 @@
+node_modules/
+reports/
+coverage/
+.env
+.env.*
+*.log
+npm-debug.log*
+.DS_Store
+cross-prune-test/
